@@ -36,13 +36,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CPUserControls">
-      <HintPath>..\..\CPUserControls\CPUserControls\bin\Debug\CPUserControls.dll</HintPath>
-    </Reference>
-    <Reference Include="CreateCustomer.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Case Parts APIs\CreateCustomer.API\bin\Debug\CreateCustomer.API.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -64,9 +57,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WinformsValidation">
-      <HintPath>..\..\WinformsValidation\WinformsValidation\bin\Debug\WinformsValidation.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\CPMail\Reference.cs">
@@ -135,6 +125,7 @@
     <None Include="Resources\singlecheckmark.png" />
     <None Include="Resources\singlex.png" />
     <None Include="Resources\singlex16x16.png" />
+    <Content Include="CreateCustomer.API.csproj" />
     <Content Include="Shared.png" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +133,20 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\CPMail\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Case-Parts-APIs\CreateCustomer.API\CreateCustomer.API.csproj">
+      <Project>{71145d0b-996d-47b5-891f-4269fce0245d}</Project>
+      <Name>CreateCustomer.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CPUserControls\CPUserControls\CPUserControls.csproj">
+      <Project>{dd27dba7-3b2b-4d04-805c-f288013294d5}</Project>
+      <Name>CPUserControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinformsValidation\WinformsValidation\WinformsValidation.csproj">
+      <Project>{d6acb15e-7a29-46a4-b050-ba71a6ab901f}</Project>
+      <Name>WinformsValidation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
